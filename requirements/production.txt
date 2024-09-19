@@ -1,0 +1,5 @@
+--constraint constraints.txt
+ddtrace==2.12.2
+django-ses[events]==4.1.1
+# waiting change smart_text to smart_str release to pypi
+git+https://github.com/harikitech/django-elastipymemcache.git@master
