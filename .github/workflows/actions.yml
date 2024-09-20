@@ -31,7 +31,8 @@ jobs:
 
       - name: Install Python packages
         run: |
-          uv pip install --system --requirement requirements.txt
+          # uv pip install --system --requirement requirements.txt
+          python3 -m uv pip install --requirement requirements.txt
 
       - name: Check migrations
         run: python3 --version
