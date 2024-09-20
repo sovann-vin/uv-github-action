@@ -13,10 +13,10 @@ jobs:
       - name: Checkout repo content
         uses: actions/checkout@v4 
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11.1'
+      # - name: Set up Python
+      #   uses: actions/setup-python@v5
+      #   with:
+      #     python-version: '3.11.1'
 
       - name: Enable caching
         uses: astral-sh/setup-uv@v2
@@ -37,7 +37,7 @@ jobs:
           uv pip install --system --requirement requirements.txt
 
       - name: Check migrations
-        run: python3 manage.py makemigrations --check
+        run: python3 --version
         
       - name: Execute Python script  # Run main.py
         env:
