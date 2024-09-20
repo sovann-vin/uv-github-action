@@ -36,6 +36,9 @@ jobs:
         run: |
           uv pip install --system --requirement requirements.txt
 
+      - name: Check migrations
+        run: python3 manage.py makemigrations --check
+        
       - name: Execute Python script  # Run main.py
         env:
           SOME_SECRET: ${{ secrets.SOME_SECRET }}
