@@ -31,7 +31,9 @@ jobs:
 
       - name: Install Python packages
         run: |
-          uv pip install --system --requirement requirements.txt
+          uv pip install \
+           --system --requirement requirements.txt \
+            mysqlclient
 
       - name: Check migrations
         run: python3 --version
