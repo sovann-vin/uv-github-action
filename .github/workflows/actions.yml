@@ -34,7 +34,7 @@ jobs:
 
       - name: Install Python packages
         run: |
-          uv pip install --requirement requirements.txt
+          uv pip install --system --requirement requirements.txt
 
       - name: Execute Python script  # Run main.py
         env:
