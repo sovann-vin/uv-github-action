@@ -32,6 +32,8 @@ jobs:
           uv pip install \
            --system --requirement requirements.txt \
             mysqlclient
+        env:
+          UV_SYSTEM_PYTHON: 1    
 
       - name: Check migrations
         run: python3 --version
