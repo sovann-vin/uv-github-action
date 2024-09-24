@@ -1,4 +1,4 @@
 migration:
 - changed-files:
-  - any-glob-to-any-file: **/migrations/**
+  - any-glob-to-any-file: "**/migrations/**"
   
