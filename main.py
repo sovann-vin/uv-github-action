@@ -19,7 +19,7 @@ logger.addHandler(logger_file_handler)
 try:
     SOME_SECRET = os.environ["SOME_SECRET"]
 except KeyError:
-    SOME_SECRET = "Token not available!"
+    SOME_SECRET = "Token not available :( !"
     #logger.info("Token not available!")
     #raise
 
@@ -31,4 +31,4 @@ if __name__ == "__main__":
     if r.status_code == 200:
         data = r.json()
         temperature = data["forecast"]["temp"]
-        logger.info(f'Weather in Berlin 123: {temperature}')
+        logger.info(f'Weather in Berlin: {temperature}')
