@@ -1,3 +1,4 @@
 migration:
 - changed-files:
-  - any-glob-to-any-file: uv-github-action/migrations/*
+  - any-glob-to-any-file: **/migrations/**
+  
