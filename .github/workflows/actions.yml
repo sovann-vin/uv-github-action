@@ -18,13 +18,14 @@ jobs:
         with:
           python-version: '3.11.1'
 
-      - name: Enable caching
+      - name: Install uv
         uses: astral-sh/setup-uv@v2
         with:
           enable-cache: true
           cache-dependency-glob: |
             requirements.txt
             requirements/*.txt
+          version: "0.4.15"
 
       - name: Install Python packages
         run: |
